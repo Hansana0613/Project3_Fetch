@@ -11,5 +11,13 @@ async function getRequest() {
                 headers: {
                     "Content-Type": "application/json"
                 }
-            });
+            }
+    );
+
+    if (response.ok) {
+        var text = await response.text();
+        console.log(text);
+    } else {
+        console.log("Response Error");
+    }
 }
